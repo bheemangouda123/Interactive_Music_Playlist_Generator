@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RegisterCss.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="register-container">
+        <form class="register-form">
+            <h2>Register</h2>
+            <label for="username">Name:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+
+            <label for="phnum">Phone Number:</label>
+            <input type="number" id="phnum" name="phonenumber" placeholder="Enter your phone number">
+
+            <label for="Email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your Valid Email">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+
+            <button type="submit" onclick="sub()">Submit</button>
+            <br>
+            
+        </form>
+    </div>
+
+    <script>
+        function sub(){
+            alert("Submited")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Music Playlist Generator</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Music Playlist Generator</h1>
+            <p>Create your customized playlist based on mood and preferences!</p>
+        </div>
+    </header>
+
+    <section class="main-content">
+        <svg xmlns="http://www.w3.org/2000/svg" width="500px" height="20" fill="currentColor" class="player" viewBox="0 0 16 16">
+            <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+          </svg>
+        <div class="container">
+            <div class="options">
+                <h2>Customize Your Playlist</h2>
+                <form id="playlistForm">
+                    <label for="moodSelect">Select Mood:</label>
+                    <select id="moodSelect" name="mood" onchange="updateMoodVisualization()">
+                        <option value="happy">Happy</option>
+                        <option value="relaxed">Relaxed</option>
+                        <option value="energetic">Energetic</option>
+                        <option value="energetic">Random</option>
+                        <!-- Add more mood options as needed -->
+                    </select>
+
+                    <!-- Include other form elements like genre preferences, tempo slider, etc. -->
+
+                    <button type="button" onclick="generatePlaylist()">Generate Playlist</button>
+                </form>
+
+                <div id="moodVisualization" class="mood-visualization"></div>
+            </div>
+
+            <div class="preview">
+                <h2>Preview Your Playlist</h2>
+                <ul id="suggestedTracks"></ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="actions">
+        <div class="container">
+            <!-- Include buttons for generating playlist, saving, and sharing -->
+            <!-- Add interactive elements and JavaScript functionality here -->
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Music Playlist Generator</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

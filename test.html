@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player with Seek Bar</title>
+  <style>
+    /* Add some basic styling for better appearance */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #seekbar {
+      width: 80%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <audio id="myAudio" controls>
+    <source src="your-audio-file.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <input type="range" id="seekbar" value="0" step="1" min="0" max="100" oninput="updateSeekBar()">
+  
+  <script>
+    // Get the audio element
+    var audio = document.getElementById("myAudio");
+
+    // Get the seek bar element
+    var seekbar = document.getElementById("seekbar");
+
+    // Update the seek bar as the audio plays
+    function updateSeekBar() {
+      var value = seekbar.value;
+      var duration = audio.duration;
+      var currentTime = (value * duration) / 100;
+      audio.currentTime = currentTime;
+    }
+
+    // Update the seek bar position as the audio plays
+    audio.addEventListener("timeupdate", function() {
+      var currentTime = audio.currentTime;
+      var duration = audio.duration;
+      var percentage = (currentTime / duration) * 100;
+      seekbar.value = percentage;
+    });
+  </script>
+</body>
+</html>

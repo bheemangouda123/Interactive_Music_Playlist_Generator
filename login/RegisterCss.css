@@ -1,0 +1,60 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; /* Prevents horizontal scrollbar caused by the animation */
+}
+
+
+
+
+.register-container{
+        width: 300px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        animation: bounceIn 0.8s ease-out;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 3s ease;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+
+button:hover {
+    background-color: #555;
+}

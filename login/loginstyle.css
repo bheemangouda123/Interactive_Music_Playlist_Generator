@@ -1,0 +1,93 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; /* Prevents horizontal scrollbar caused by the animation */
+}
+
+.login-container {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 0.8s ease-out;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #555;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        width: 80%;
+    }
+}
+
+/* Keyframes for the bounceIn animation */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+}
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+p{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
